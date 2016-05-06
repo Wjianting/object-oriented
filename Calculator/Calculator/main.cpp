@@ -7,16 +7,24 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
+	Calculation calculation;
 	Scan scan;
-	Print print;
-
-	cout << "请输入表达式" << endl;
-	string input;
-	cin >> input;
-
-	queue<string>queue = scan.ToStringQueue(input);
-
-	print.ToOutput(queue);
+	string strData1;
+	string strData2;
+	strData1 = argv[1];
+	queue<string>queue;
+	if (strData1 == "-a")
+	{
+		strData2 == argv[2];		
+		cout << strData2;
+		queue = scan.ToStringQueue(strData2);
+		cout << "= " << calculation.ToCalculate(queue) << endl;
+	}
+	else
+	{
+		queue = scan.ToStringQueue(strData1);
+		cout << calculation.ToCalculate(queue) << endl;
+	}
 	system("pause");
 	return 0;
 }
