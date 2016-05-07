@@ -18,7 +18,8 @@ private:
 class Print :public Scan
 {
 public:
-	void ToOutput(queue<string>queue);
+	void Print::ToOutput1(double answer, string exp);
+	void Print::ToOutput2(double answer);
 };
 
 class Calculation :private Scan

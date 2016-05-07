@@ -42,15 +42,14 @@ queue<string>Scan::ToStringQueue(string input)
 }
 
 
-void Print::ToOutput(queue<string>queue)
+void Print::ToOutput1(double answer, string exp)
 {
-	string Output;
-	while (!queue.empty())
-	{
-		Output = queue.front();
-		cout << Output << " ";
-		queue.pop();
-	}
+	cout << exp << "= " << answer << endl;
+}
+
+void Print::ToOutput2(double answer)
+{
+	cout << answer << endl;
 }
 
 
