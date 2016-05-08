@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
 	else if (strData1 == "-f")
 	{
 		freopen(argv[2], "r", stdin);
-		freopen("D:\\out.txt", "w", stdout);
+		freopen(argv[3], "w", stdout);
 		string strData3;
 		cin >> strData3;
 		queue = scan.ToStringQueue(strData3);
