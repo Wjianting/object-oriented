@@ -28,10 +28,15 @@ int main(int argc, char* argv[])
 		freopen(argv[2], "r", stdin);
 		freopen(argv[3], "w", stdout);
 		string strData3;
-		cin >> strData3;
-		queue = scan.ToStringQueue(strData3);
-		answer = calculation.ToCalculate(queue);
-		print.ToOutput2(answer);
+		while (cin >> strData3)
+		{
+			queue = scan.ToStringQueue(strData3);
+			answer = calculation.ToCalculate(queue);
+			print.ToOutput2(answer);
+			strData3 = "";
+		}
+		fclose(stdin);
+		fclose(stdout);
 	}
 
 	else

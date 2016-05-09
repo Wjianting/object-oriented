@@ -1,8 +1,9 @@
-﻿生成启动时间为 2016/5/8 8:16:19。
+﻿生成启动时间为 2016/5/9 16:42:25。
      1>项目“D:\repository\Calculator\Calculator\Calculator.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         E:\VS2015\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
+         E:\VS2015\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt ScanPrint.cpp
+         ScanPrint.cpp
+     1>d:\repository\calculator\calculator\scanprint.cpp(22): warning C4018: “<”: 有符号/无符号不匹配
        Link:
          E:\VS2015\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\repository\Calculator\Debug\Calculator.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\repository\Calculator\Debug\Calculator.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\repository\Calculator\Debug\Calculator.lib" /MACHINE:X86 Debug\calculation.obj
          Debug\main.obj
@@ -12,4 +13,4 @@
 
 已成功生成。
 
-已用时间 00:00:01.60
+已用时间 00:00:00.72

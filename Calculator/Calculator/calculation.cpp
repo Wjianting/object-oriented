@@ -131,6 +131,7 @@ int Calculation::ToCalculate(queue<string>queue)
 		{
 			m_S1.push(trans);
 		}
+		expression[i] = "";
 	}
 
 	while (!m_S1.empty())/*将栈1剩余的运算符依次弹出并压入栈2，栈2中即中缀
@@ -153,6 +154,7 @@ int Calculation::ToCalculate(queue<string>queue)
 			stringstream stream(expression1[i]);
 			stream >> num;
 			m_S3.push(num);//压入栈中
+			expression1[i] = "";
 		}
 		else//遇到运算符
 		{
@@ -162,6 +164,7 @@ int Calculation::ToCalculate(queue<string>queue)
 			temp2 = m_S3.top();
 			m_S3.pop();
 			double temp3 = cal(temp1, temp2, expression1[i][0]);//取出栈顶两个数字进行计算后压回栈中
+			expression1[i] = "";
 			m_S3.push(temp3);
 		}
 	}

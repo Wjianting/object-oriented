@@ -1,4 +1,4 @@
-#include<iostream> 
+#include<iostream>
 #include<string>
 #include<queue>
 #include<cctype>
@@ -8,6 +8,11 @@ using namespace std;
 
 queue<string>Scan::ToStringQueue(string input)
 {
+
+	while (!m_quQueue.empty())
+	{
+		m_quQueue.pop();
+	}
 	if (input[0] == '-')
 	{
 		string t;
@@ -28,6 +33,7 @@ queue<string>Scan::ToStringQueue(string input)
 			if (!isdigit(input[i + 1]))
 			{
 				m_quQueue.push(trans);
+				trans = "";
 				continue;
 			}
 		}
@@ -51,5 +57,3 @@ void Print::ToOutput2(double answer)
 {
 	cout << answer << endl;
 }
-
-
