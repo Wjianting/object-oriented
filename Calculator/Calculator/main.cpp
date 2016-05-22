@@ -21,29 +21,23 @@ int main(int argc, char* argv[])
 		strData2 = argv[2];
 		queue = scan.ToStringQueue(strData2);
 		answer = calculation.ToCalculate(queue);
-		print.ToOutput1(answer, argv[2]);
+		print.ToOutput(answer, strData2);
 	}
 	else if (strData1 == "-f")
 	{
-		freopen(argv[2], "r", stdin);
-		freopen(argv[3], "w", stdout);
 		string strData3;
-		while (cin >> strData3)
-		{
-			queue = scan.ToStringQueue(strData3);
-			answer = calculation.ToCalculate(queue);
-			print.ToOutput2(answer);
-			strData3 = "";
-		}
-		fclose(stdin);
-		fclose(stdout);
+		strData3 = scan.Open(argv[2]);
+		queue = scan.ToStringQueue(strData3);
+		answer = calculation.ToCalculate(queue);
+		print.ToOutput(answer, argv[3]);
+		strData3 = "";
 	}
 
 	else
 	{
 		queue = scan.ToStringQueue(strData1);
 		answer = calculation.ToCalculate(queue);
-		print.ToOutput2(answer);
+		print.ToOutput(answer);
 	}
 	system("pause");
 	return 0;

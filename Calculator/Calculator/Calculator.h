@@ -7,19 +7,21 @@ using namespace std;
 class Scan
 {
 public:
+	string Open(string in);
 	queue<string>ToStringQueue(string input);
 private:
 	queue<string>m_quQueue;
-	int length = 0;//lengh计算数字的长度是否超标. 
-	string trans = "";//trans将char型转换为string型. 
+	int length = 0;
+	string trans = "";
 };
 
 
 class Print :public Scan
 {
 public:
-	void Print::ToOutput1(double answer, string exp);
-	void Print::ToOutput2(double answer);
+	void ToOutput(double answer, string exp, string out);
+	void ToOutput(double answer);
+	void Print::ToOutput(double answer, string exp);
 };
 
 class Calculation :private Scan

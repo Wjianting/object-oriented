@@ -24,7 +24,8 @@
   <ItemGroup>
     <ClCompile Include="calculation.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ScanPrint.cpp" />
+    <ClCompile Include="Print.cpp" />
+    <ClCompile Include="Scan.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B474BCB1-420C-4FF5-A4AA-B70C4BB01A41}</ProjectGuid>
