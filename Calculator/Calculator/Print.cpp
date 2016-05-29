@@ -4,10 +4,11 @@
 #include<fstream>
 using namespace std;
 
-void Print::ToOutput(double answer, string exp, string out)
+void Print::ToOutput(double answer, string exp, char *out)
 {
-	ofstream ofs(out);
-	cout << exp  <<  answer << endl;
+	ofstream file;
+	file.open(out);
+	file << exp  <<  answer << endl;
 }
 
 void Print::ToOutput(double answer)

@@ -7,7 +7,7 @@ using namespace std;
 class Scan
 {
 public:
-	string Open(string in);
+	string Open(char *in);
 	queue<string>ToStringQueue(string input);
 private:
 	queue<string>m_quQueue;
@@ -19,7 +19,7 @@ private:
 class Print :public Scan
 {
 public:
-	void ToOutput(double answer, string exp, string out);
+	void ToOutput(double answer, string exp, char *out);
 	void ToOutput(double answer);
 	void Print::ToOutput(double answer, string exp);
 };

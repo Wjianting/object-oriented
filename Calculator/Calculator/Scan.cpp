@@ -6,11 +6,12 @@
 #include"Calculator.h"
 using namespace std;
 
-string Scan::Open(string in)
+string Scan::Open(char *in)
 {
 	string temp;
-	ifstream ifs(in);
-	cin >> temp;
+	fstream file;
+	file.open(in);
+	file >> temp;
 	return temp;
 }
 

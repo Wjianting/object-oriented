@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 	if (strData1 == "-a")
 	{
 		strData2 = argv[2];
-		queue = scan.ToStringQueue(strData2);
+		queue = scan.ToStringQueue(argv[2]);
 		answer = calculation.ToCalculate(queue);
 		print.ToOutput(answer, strData2);
 	}
@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
 		strData3 = scan.Open(argv[2]);
 		queue = scan.ToStringQueue(strData3);
 		answer = calculation.ToCalculate(queue);
-		print.ToOutput(answer, argv[3]);
+		print.ToOutput(answer,strData3, argv[3]);
 		strData3 = "";
 	}
 
