@@ -19,7 +19,7 @@ private:
 class Print :public Scan
 {
 public:
-	void ToOutput(double answer, string exp, char *out);
+	void ToOutput(double answer, char *out);
 	void ToOutput(double answer);
 	void Print::ToOutput(double answer, string exp);
 };
@@ -27,7 +27,7 @@ public:
 class Calculation :private Scan
 {
 public:
-	int ToCalculate(queue<string>queue);
+	double ToCalculate(queue<string>queue);
 	int priority(char x);
 	void Calculation::compare(char m, string n, string q);
 private:

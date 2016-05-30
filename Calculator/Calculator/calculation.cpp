@@ -50,7 +50,7 @@ void Calculation::compare(char m, string n, string q)
 	}
 }
 
-int cal(int a, int b, char x)
+double cal(double a, double b, char x)
 {
 	if (x == '+')
 	{
@@ -81,7 +81,7 @@ int cal(int a, int b, char x)
 
 
 
-int Calculation::ToCalculate(queue<string>queue)
+double Calculation::ToCalculate(queue<string>queue)
 {
 	int i;
 	double num;
@@ -158,12 +158,10 @@ int Calculation::ToCalculate(queue<string>queue)
 		}
 		else//遇到运算符
 		{
-			double temp1, temp2;
-			temp1 = m_S3.top();
-			m_S3.pop();
-			temp2 = m_S3.top();
-			m_S3.pop();
-			double temp3 = cal(temp1, temp2, expression1[i][0]);//取出栈顶两个数字进行计算后压回栈中
+			double temp1, temp2, temp3;
+			temp1 = m_S3.top(); m_S3.pop();
+			temp2 = m_S3.top(); m_S3.pop();
+			temp3 = cal(temp1, temp2, expression1[i][0]);//取出栈顶两个数字进行计算后压回栈中
 			expression1[i] = "";
 			m_S3.push(temp3);
 		}

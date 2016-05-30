@@ -32,14 +32,8 @@ queue<string>Scan::ToStringQueue(string input)
 	{
 		if (isdigit(input[i]) || input[i] == '.')//如果扫描到数字,对整个数字进行处理. 
 		{
-			if (input[i] == '.')
-			{
-				i++;//如果接收到小数点,不计数,直接接收下一个数字. 
-			}
-
-
 			trans += input[i];
-			if (!isdigit(input[i + 1]))
+			if (!isdigit(input[i + 1]) && input[i + 1] != '.')
 			{
 				m_quQueue.push(trans);
 				trans = "";
